@@ -1,0 +1,418 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: 'Shrikhand';
+	src: url(../fonts/Shrikhand/Shrikhand-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Oxanium semi-bold';
+	src: url(../fonts/Oxanium/Oxanium-ExtraBold.ttf);
+}
+
+@font-face {
+	font-family: 'FugazOne';
+	src: url(../fonts/Fugaz_One/FugazOne-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'CarterOne';
+	src: url(../fonts/Carter_One/CarterOne-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins Italic';
+	src: url(../fonts/Poppins/Poppins-ThinItalic.ttf);
+}
+
+@font-face {
+	font-family: 'TradeWinds';
+	src: url(../fonts/Trade_Winds/TradeWinds-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Press Start';
+	src: url(../fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins sans-serif';
+	src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins medium';
+	src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins semi-bold';
+	src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins bold';
+	src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins extra-bold';
+	src: url(../fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins black';
+	src: url(../fonts/Poppins/Poppins-Black.ttf);
+}
+
+body{
+	position: relative;
+	background-color: black;
+	color: white;
+	-webkit-transition:color 1s ease;
+	-moz-transition:color 1s ease;
+	-o-transition:color 1s ease;
+	transition:color 1s ease;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+}
+
+footer a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+@media only screen and (max-width:420px){
+	header {
+		position: fixed;
+		top: 0;
+		/* border-bottom: 2px solid white; */
+		padding: 1em 0em;
+		width: 100%;
+		height: 30%;
+		font-family: 'Poppins semi-bold';
+	}
+
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		border-top: 2px solid white;
+		padding: 1em 0em;
+		width: 100%;
+		text-align: center;
+		font-family: 'Poppins semi-bold';
+		color: white;
+		letter-spacing: 1px;
+		background-color: black;
+	}
+
+	input{
+		/* visibility: hidden; */
+		opacity: 0;
+		/* pour que le position soit p/r au body > div */
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		margin: 0;
+		/* pour que le click sur le checkbox soit traité de maniere prioritaire */
+		z-index: 1;
+	}
+
+	#presentation img:nth-of-type(2) {
+		display: none;
+	}
+
+	#menu{
+		position: absolute;
+		right:20px;
+		width: 60px;
+		margin: 0;
+		flex: auto;
+	}
+
+	.menuham {
+		width: 50px;
+		height: 8px;
+		margin: 8px ;
+		background-color: blueviolet;
+		border-radius: 3px;
+		transition: all 0.5s ease;
+	}
+
+	.menu_options {
+		position: absolute;
+		right:0px;
+		top: 70px;
+		text-align: end;
+		transition: all 1.5s ease;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.menu_options a{
+		transition: all .15s ease;
+	}
+
+	.menu_options li {
+		list-style-type: none;
+		padding: 0.3em;
+	}
+
+	.menu_options a {
+		text-decoration-line: none;
+		color: white;
+	}
+
+	input:checked~div:nth-of-type(3){
+		opacity: 0;
+	}
+
+	input:checked~div:nth-of-type(2){
+		transform:translateY(16px) rotate(-45deg) ;
+	}
+
+	input:checked~div:nth-of-type(4){
+		transform:translateY(-16px) rotate(45deg);
+	}
+
+	input:checked~.menu_options {
+		opacity: 1;
+	}
+
+	.menu_options a:active{
+		color: rgb(0, 255, 0);
+		font-size: 1.5em;
+	}
+
+
+	#mask {
+		background-color:moccasin;
+		position: fixed;
+		right:0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		transition: all 1s ease;
+		opacity: 0;
+	}
+
+	input:checked~#mask {
+		opacity: 0.3;
+	}
+
+	#presentation, #education, #expertise, #portfolio {
+		margin: 78px 38px;
+		font-family: 'Poppins sans-serif';
+	}
+
+	#presentation h1 {
+		font-family: 'Shrikhand';
+		margin: 0.5em 0;
+		padding: 0.5em 0;
+		letter-spacing: 1px;
+	}
+
+	#presentation h3 {
+		/* font-family: 'Poppins Italic'; */
+		padding: 0.4em 0.2em 0.5em 0;
+		border-top: 1px solid darkturquoise;
+		width: 250px;
+	}
+
+	#presentation h2 {
+		/* font-family: 'Poppins Italic'; */
+		padding-bottom: 0.2em;
+	}
+
+
+	.social_info {
+		border-top: 2px ridge white ;
+		margin: 3rem 3rem 0.5rem 3rem;
+		padding-top: 2em;
+	}
+
+	#contact_info {
+		border-bottom: 2px ridge white;
+		margin: 0rem 3rem 0.5rem 3rem;
+		padding-bottom: 3em;
+
+	}
+
+	#github {
+		text-align: center;
+		padding: .75rem;
+	}
+
+	#github img:nth-of-type(1) {
+		width: 75px;
+	}
+
+	#github img:nth-of-type(2) {
+		width: 32px;
+		display: inline-block;
+	}
+
+	#linkedin img{
+		width: 110px;
+		display: block;
+		margin: auto;
+		padding: .75rem;
+	}
+
+	#contact_info {
+		text-align: center;
+	}
+
+	#email img{
+		width: 35px;
+		padding: 0.5em 0em;
+	}
+
+	#phone {
+		display: inline;
+		padding-bottom: 0.5em;
+	}
+
+	#phone img{
+		width: 35px;
+		padding-top: 0.5em;
+	}
+
+	#email {
+		padding-top: 0.5em;
+	}
+
+	.diplomas {
+		display: grid;
+		grid-template-columns: 1fr 35%;
+		grid-template-rows: repeat(5, auto);
+		grid-row-gap:1em;
+
+	}
+
+	.diplomas #title {
+		grid-area: 1/1/2/3;
+		justify-self: center;
+		margin-bottom: 1em;
+		font-family: 'Poppins extra-bold';
+	}
+
+	.diplomas h3:nth-of-type(1) {
+		grid-area: 2/1/3/3;
+		justify-self: center;
+	}
+
+	.diplomas h3:nth-of-type(2) {
+		grid-area: 4/1/5/3;
+		justify-self: center;
+	}
+
+	.diplomas p:nth-of-type(1) {
+		grid-area: 3/1/4/2;
+		justify-self: center;
+	}
+
+	.diplomas p:nth-of-type(2) {
+		grid-area: 3/2/4/3;
+		justify-self: center;
+		margin-bottom: 1.5em;
+		border-left: 2px solid darkturquoise;
+		padding-left:1em;
+	}
+
+	.diplomas p:nth-of-type(3) {
+		grid-area: 5/1/6/2;
+		justify-self: center;
+	}
+
+	.diplomas p:nth-of-type(4) {
+		grid-area: 5/2/6/3;
+		justify-self: center;
+		margin-bottom: .5em;
+		border-left: 2px solid darkturquoise;
+		padding-left:1em;
+	}
+
+
+	.diplomas {
+		display: grid;
+		grid-template-columns: 1fr 35%;
+		grid-template-rows: repeat(5, auto);
+		grid-row-gap:1em;
+
+	}
+
+	#expertise .container {
+
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(7, auto);
+		grid-row-gap:1.5em;
+
+	}
+
+	#expertise {
+		border-top: 2px solid white;
+		padding: 2em 1em  1em .5em;
+	}
+
+	#expertise h1 {
+		font-family: 'Poppins extra-bold';
+		justify-self: center;
+		padding: 1em 0;
+	}
+
+	#expertise h3 {
+		padding-top: 1em;
+		color: darkturquoise;
+	}
+
+	#expertise ul {
+		padding-left: 2em;
+	}
+
+	#portfolio {
+		padding-bottom: 3em;
+	}
+
+	#portfolio .container {
+
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(4, auto);
+		grid-row-gap:1.5em;
+
+	}
+
+	#portfolio h1 {
+		font-family: 'Poppins extra-bold';
+		justify-self: center;
+		padding: 2em 0  1em 0;
+		border-top: 1px dashed white;
+	}
+
+	#portfolio h3 {
+		justify-self: center;
+		color: darkturquoise;
+	}
+
+	#portfolio img {
+		width: 340px;
+	}
+
+	#portfolio p {
+		padding: 0 2em;
+	}
+
+}

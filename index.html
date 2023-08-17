@@ -1,0 +1,132 @@
+<!-- AUTEUR : ELISHA CITO BUHENDWA -->
+<!-- AJOUT : Changement de la couleur du texte du body lors de l'activation du menu-hamburger -->
+<!-- Changement de la taille et de la couleur des options du menuhamburger lorsqu'il est actif -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/desktop.css">
+	<script src="js/animation.js"></script>
+	<title>Mon CV</title>
+</head>
+<body>
+	<header>
+		<div id="menu">
+			<input type="checkbox" onclick="changeBodyColor()">
+			<div id="mask"></div>
+			<div class="menuham"></div>
+			<div class="menuham"></div>
+			<div class="menuham"></div>
+			<div class="menu_options">
+				<nav>
+					<ul>
+						<li><a href="#presentation">PRESENTATION</a></li>
+						<li><a href="#education">EDUCATION</a></li>
+						<li><a href="#expertise">EXPERTISE</a></li>
+						<li><a href="#portfolio">PORTFOLIO</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main id="content">
+
+			<section id="presentation">
+				<h2>ELISHA CITO BUHENDWA</h2>
+				<h3>Junior Web Developer</h3>
+				<img src="images/profil_mobile.jpg" alt="profil">
+				<img id="photo" src="images/profil_web.jpg" alt="profil_web">
+				<h1>UN PEU SUR MOI <br> ET MES OBJECTIFS</h1>
+				<P>
+					Après avoir effectué une formation intensive d'un an et demi au cégep du Vieux-Montréal,
+					j’aspire à trouver mon premier emploi en tant que développeur web. <br>
+					Même si je n’ai pas encore d’expériences concrètes en entreprises,
+					j’ai cependant développé de nombreux projets durant mon parcours.
+					N’hésitez pas à consulter mon portfolio dans la dernière section de mon site web
+					ou bien directement sur mon profil GitHub.
+				</P>
+				<div class="social_info">
+					<div id="github">
+						<a href="http://github.com/ashileotic/">
+							<img src="icons/GitHub-Logos/GitHub_Logo_White.png" alt="github mark">
+							<img src="icons/GitHub-Mark/GitHub-Mark-Light-64px.png" alt="github icon">
+						</a>
+					</div>
+					<a id="linkedin" href="https://www.linkedin.com/in/elisha-c-buhendwa-3575b1177">
+						<img src="icons/LinkedIn-Logos/LI-Logo.png" alt="linkedin" >
+					</a>
+				</div>
+				<div id="contact_info">
+					<div id="phone">
+						<img src="icons/contact/phone_number.png" alt="phone_number">
+						<p>(514) 623-9403</p>
+					</div>
+					<div id="email">
+						<img src="icons/contact/email.png" alt="email">
+						<p> ecbuhendwa@gmail.com</p>
+					</div>
+				</div>
+
+			</section>
+			<section id="education">
+				<div class="diplomas">
+					<h1 id="title">EDUCATION</h1>
+					<h3 class="vm">DIPLOMA IN COMPUTER SCIENCE</h3>
+					<p class="vm">CÉGEP VIEUX-MONTRÉAL</p>
+					<p class="vm">2019 - 2020</p>
+					<h3 class="mv">DIPLOMA IN GRAPHIC DESIGN</h3>
+					<p class="mv">CÉGEP MARIE-VICTORIN</p>
+					<p class="mv">2015 - 2016</p>
+				</div>
+
+			</section>
+			<section id="expertise">
+				<div class="container">
+					<h1>EXPERTISE</h1>
+					<h3>Mes points forts en informatique</h3>
+					<ul>
+						<li>Full-Stack</li>
+						<li>Database Administration</li>
+						<li>Object-Oriented Programming</li>
+					</ul>
+
+					<h3>Langages & Domaines connus</h3>
+					<ul>
+						<li>HTML / CSS / Javascript / PHP</li>
+						<li>SQL / Oracle</li>
+						<li>MySQL / MongoDB / Neo4J / BerkleyDB</li>
+						<li>Java / Python / C++</li>
+					</ul>
+
+					<h3>Expériences réliées</h3>
+					<ul>
+						<li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+						<li>Lorem ipsum, dolor sit amet.</li>
+					</ul>
+				</div>
+
+			</section>
+			<section id="portfolio">
+				<div class="container">
+					<h1>PORTFOLIO</h1>
+					<h3>THE SPACEBALL GAME</h3>
+					<img src="images/spaceball.png" alt="spaceball">
+					<p>Ce jeu met en pratique la programmation objet en JavaScript ainsi que la balise Canvas.</p>
+					<p>L'objectif du jeu est d'aller le plus loin possible avec la balle sans qu’elle ne tombe entre les blocs.</p>
+				</div>
+			</section>
+
+
+	</main>
+	<footer>
+		<a href="http://www.linkedin.com/in/elisha-c-buhendwa-3575b1177">
+			<p>HIRE ME</p>
+		</a>
+
+	</footer>
+</body>
+</html>

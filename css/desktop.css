@@ -1,0 +1,354 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	width: 100vw;
+}
+
+
+@font-face {
+	font-family: 'Press Start';
+	src: url(../fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins Italic';
+	src: url(../fonts/Poppins/Poppins-ThinItalic.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins sans-serif';
+	src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins medium';
+	src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins semi-bold';
+	src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins bold';
+	src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins extra-bold';
+	src: url(../fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins black';
+	src: url(../fonts/Poppins/Poppins-Black.ttf);
+}
+
+@media only screen and (min-width:420px){
+
+	body {
+		display: grid;
+		grid-template-columns: 25% 50% 1fr;
+		grid-template-rows: 1fr 55px;
+		font-family: 'Poppins sans-serif';
+	}
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		border-top: 2px solid white;
+		padding: 1em 0em;
+		width: 100%;
+		text-align: center;
+		font-family: 'Poppins semi-bold';
+		color: white;
+		letter-spacing: 1px;
+		background-color: black;
+		grid-area: 2/1/3/3;
+	}
+
+	header {
+		position: fixed;
+		height: 100%;
+		grid-area: 1/1/2/2;
+		padding: 5em;
+		background: linear-gradient(270deg, #272727 0%, rgba(44, 46, 48, 0) 27.99%), #000000;
+	}
+
+	#content {
+		grid-area: 1/2/2/3;
+		padding: 4em 0 3em 0;
+		margin: 2rem 0;
+	}
+
+	#menu input {
+		display: none;
+	}
+
+	.menu_options {
+		width: 210px;
+		height: 353px;
+		justify-self: center;
+		padding: 10em 0;
+	}
+
+	.menu_options li {
+		list-style-type: none;
+		padding: 2em 0;
+		text-align: center;
+	}
+
+	.menu_options a {
+		transition: all .5s ease;
+		text-decoration-line: none;
+		color: white;
+		font-family: 'Poppins bold';
+		font-size: x-large;
+	}
+
+	.menu_options a:hover {
+		color: darkturquoise;
+		font-size: xx-large;
+	}
+
+	/* Education */
+
+	#presentation img:nth-of-type(1) {
+		display: none;
+	}
+
+	#presentation {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: repeat(5, auto);
+		gap: .7em 1em;
+		padding-bottom: 5em;
+	}
+
+	#presentation h1 {
+		grid-area: 1/1/2/3;
+		font-family: 'Press Start';
+		font-weight: bolder;
+		font-size: xx-large;
+		padding-bottom: 2rem;
+	}
+
+	#presentation #photo {
+		grid-area: 2/2/4/3;
+		width: 25vw;
+	}
+
+	#presentation h2 {
+		grid-area: 4/2/5/3;
+	}
+
+	#presentation h3 {
+		grid-area: 5/2/6/3;
+
+	}
+
+	#presentation p {
+		grid-area: 2/1/3/2;
+		padding: 0 2em 2em 0;
+		font-size: 1.3em;
+	}
+
+	#presentation #github, #linkedin {
+		grid-area: 3/1/4/2;
+		text-align: center;
+		padding: 1.5em 4em;
+	}
+
+	#presentation #github img:nth-of-type(1) {
+		width: 150px;
+		height: auto;
+		display: inline-block;
+	}
+
+	#presentation #linkedin img {
+		width: 200px;
+		height: auto;
+		display: inline-block;
+		padding: 0 4em ;
+	}
+
+	#presentation #contact_info {
+		grid-area: 4/1/6/2;
+	}
+
+	#presentation #contact_info #phone{
+		display: flex;
+		justify-content: center;
+	}
+
+	#presentation #contact_info #email{
+		display: flex;
+		justify-content: center;
+
+	}
+
+	#presentation #contact_info #phone img{
+		width: 40px;
+		height: 40px;
+		display: block;
+		padding: 0em 1.5em;
+	}
+
+	#presentation #contact_info #email img{
+		width: 40px;
+		height: 40px;
+		display: block ;
+		padding: 0em 1.5em;
+	}
+
+	#presentation h3 {
+		width: 300px;
+		justify-self: right;
+		text-align: right;
+	}
+
+	#presentation h2 {
+		font-family: 'Poppins extra-bold';
+		font-size: 2em;
+		text-align: right;
+		border-bottom: 1px solid darkturquoise;
+	}
+
+	/* Education */
+
+
+	#education {
+		border-top: 2px solid white;
+		padding: 13rem 4rem;
+		font-size: 1.5em;
+	}
+
+	.diplomas {
+		display: grid;
+		grid-template-columns: 1fr 40%;
+		grid-template-rows: repeat(5, auto);
+		grid-row-gap:1em;
+
+	}
+
+	.diplomas #title {
+		grid-area: 1/1/2/3;
+		justify-self: center;
+		margin-bottom: 1em;
+		font-family: 'Poppins extra-bold';
+		font-size: 2em;
+	}
+
+	.diplomas h3:nth-of-type(1) {
+		grid-area: 2/1/3/3;
+		justify-self: center;
+	}
+
+	.diplomas h3:nth-of-type(2) {
+		grid-area: 4/1/5/3;
+		justify-self: center;
+	}
+
+	.diplomas p:nth-of-type(1) {
+		grid-area: 3/1/4/2;
+		justify-self: right;
+		padding-right:1em;
+	}
+
+	.diplomas p:nth-of-type(2) {
+		grid-area: 3/2/4/3;
+		justify-self: left;
+		margin-bottom: 1.5em;
+		border-left: 2px solid darkturquoise;
+		padding-left:1em;
+	}
+
+	.diplomas p:nth-of-type(3) {
+		grid-area: 5/1/6/2;
+		justify-self: right;
+		padding-right:1em;
+	}
+
+	.diplomas p:nth-of-type(4) {
+		grid-area: 5/2/6/3;
+		justify-self: left;
+		margin-bottom: .5em;
+		border-left: 2px solid darkturquoise;
+		padding-left:1em;
+	}
+
+	/* Expertise */
+
+	#expertise .container {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(7, auto);
+		gap:1em 0;
+		justify-content: center;
+		font-size: 1.5em;
+	}
+
+	#expertise {
+		border-top: 2px solid white;
+		padding: 1.5em 1em 3em .5em;
+	}
+
+	#expertise h1 {
+		font-family: 'Poppins extra-bold';
+		justify-self: center;
+		padding: 2em 0 0 0;
+		font-size: 1.5em;
+	}
+
+	#expertise h3 {
+		padding-top: 1em;
+		color: darkturquoise;
+		padding-left: 4em;
+	}
+
+	#expertise ul {
+		padding-left: 8em;
+	}
+
+	/* Portfolio */
+
+	#portfolio {
+		padding: 5em 5em 2em 5em ;
+		font-size: x-large;
+	}
+
+	#portfolio .container {
+
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(4, auto);
+		grid-row-gap:1.5em;
+
+	}
+
+	#portfolio h1 {
+		font-family: 'Poppins extra-bold';
+		justify-self: center;
+		padding: 2em 0  1em 0;
+		border-top: 1px dashed white;
+	}
+
+	#portfolio h3 {
+		font-family: 'Press Start';
+		justify-self: center;
+		color: darkturquoise;
+	}
+
+	#portfolio img {
+		justify-self: center;
+	}
+
+	#portfolio p {
+		padding: 0 2em;
+	}
+}
